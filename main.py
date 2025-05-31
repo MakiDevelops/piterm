@@ -1,5 +1,6 @@
 import os
 import time
+import subprocess
 
 # Set vars
 commands = ["apl","time","help","exit"]
@@ -20,7 +21,7 @@ while True:
         if a in notexts:
             print("No.")
         if a == "apl":
-           import apl
+            subprocess.run(["python3", "apploader/apl.py"])
         if a == "help":
             print(helptext)
     else:
